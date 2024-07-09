@@ -4,6 +4,8 @@
 
 LINE のログを放り込むことで、指定した月の通話時間に関するログを出力するスクリプトです。
 
+<img src="example.png" width="500px" />
+
 ## How to use
 
 1. Clone the repository
