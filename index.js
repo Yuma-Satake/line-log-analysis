@@ -67,6 +67,14 @@ const main = async () => {
       return chat.message.includes("Call");
     });
 
+    fs.writeFile("result.js", JSON.stringify(currentMonthCallData), (err) => {
+      if (err) {
+        console.error(err);
+        return;
+      }
+      console.log("✅Data written to result.js");
+    });
+
     const currentMonthCallCount = currentMonthCallData.length.toString();
     const currentMonthCallTime = currentMonthCallData.reduce((acc, chat) => {
       const time = chat.message.split(" ")[3];
